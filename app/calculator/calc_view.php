@@ -1,4 +1,3 @@
-<?php require_once dirname(__FILE__) .'/../config.php';?>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
 <head>
@@ -6,7 +5,8 @@
 <title>Kalkulator kredytowy</title>
 </head>
 <body>
-<form action="<?php print(_APP_URL);?>/app/calc.php" method="post">
+<a href="<?php print(_APP_ROOT); ?>/app/security/logout.php">Wyloguj</a>
+<form action="<?php print(_APP_URL);?>/app/calculator/calc.php" method="post">
 	<label for="amount">Kwota (PLN): </label>
 	<input id="amount" type="number" name="amount" value="<?php isset($amount) ? print($amount) : printf('') ?>" /><br />
 
